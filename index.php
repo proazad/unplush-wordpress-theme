@@ -69,12 +69,30 @@
                                     <div class="modal-dialog modal-xl">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h6 class="modal-title" id="">
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </h6>
+                                                <header class="container d-flex justify-content-between align-items-center">
+                                                    <div class="author-header">
+                                                        <?php echo get_avatar(get_the_author_meta('ID')); ?>
+                                                        <div class="single-author-head">
+                                                            <h5><?php the_author(); ?></h5>
+                                                            <small>
+                                                                <?php _e('Available for Hire','pexels');?>
+                                                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-check" class="svg-inline--fa fa-circle-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                    <path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM371.8 211.8l-128 128C238.3 345.3 231.2 348 224 348s-14.34-2.719-19.81-8.188l-64-64c-10.91-10.94-10.91-28.69 0-39.63c10.94-10.94 28.69-10.94 39.63 0L224 280.4l108.2-108.2c10.94-10.94 28.69-10.94 39.63 0C382.7 183.1 382.7 200.9 371.8 211.8z">
+                                                                    </path>
+                                                                </svg>
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <a href="<?php echo esc_url(get_theme_mod('pexels_user_upwork_profile')); ?>" target="_blank" class="btn btn-small contact-btn">Contact me</a>
+                                                    <h6 class="modal-title" id="">
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </h6>
+                                                    
+                                                </header>
                                             </div>
                                             <div class="modal-body">
-                                                <iframe src="<?php the_permalink(); ?>" id="iframe<?php echo esc_attr($pn); ?>" width="100%" height="1800px">
+                                                <iframe src="<?php the_permalink(); ?>" id="iframe<?php echo esc_attr($pn); ?>" width="100%" height="900px">
                                                 </iframe>
                                             </div>
                                         </div>
@@ -86,7 +104,7 @@
                     }
                     ?>
                 </div>
-                <div class="text-center py-3 d-none">
+                <div class="text-center py-3">
                     <a href="<?php next_posts(); ?>" class="btn btn-info">Load More</a>
                 </div>
             </div>

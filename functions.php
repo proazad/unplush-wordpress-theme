@@ -41,6 +41,7 @@ function pexels_assets()
     // Load Styles 
     wp_enqueue_style('bootstrap-css', get_theme_file_uri('/assets/lib/bootstrap/css/bootstrap.min.css'), false, VERSION);
     wp_enqueue_style('twentytwenty-css', get_theme_file_uri('assets/lib/beforeafter/css/twentytwenty.css'), false, VERSION);
+    
     wp_enqueue_style('common-css', get_theme_file_uri('/assets/css/common.css'), false, VERSION);
 
     wp_enqueue_style('main-style', get_stylesheet_uri(), false, VERSION);
@@ -66,7 +67,7 @@ function pexels_assets()
     }
 }
 add_action('wp_enqueue_scripts', 'pexels_assets');
-add_action('wp_enqueue_scripts', 'pexels_assets');
+// add_action('wp_enqueue_scripts', 'pexels_assets');
 
 /**
  * Related Posts

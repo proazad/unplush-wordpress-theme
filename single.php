@@ -19,24 +19,6 @@ $ln_link = add_query_arg(array(
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <header class="d-flex justify-content-between my-3">
-                    <div class="author-header">
-                        <?php echo get_avatar(get_the_author_meta('ID')); ?>
-                        <div class="single-author-head">
-                            <h5><?php the_author(); ?></h5>
-                            <small>
-                                <?php _e('Available for Hire','pexels');?>
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-check" class="svg-inline--fa fa-circle-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM371.8 211.8l-128 128C238.3 345.3 231.2 348 224 348s-14.34-2.719-19.81-8.188l-64-64c-10.91-10.94-10.91-28.69 0-39.63c10.94-10.94 28.69-10.94 39.63 0L224 280.4l108.2-108.2c10.94-10.94 28.69-10.94 39.63 0C382.7 183.1 382.7 200.9 371.8 211.8z">
-                                    </path>
-                                </svg>
-                            </small>
-                        </div>
-                    </div>
-                    <a href="<?php echo esc_url(get_theme_mod('pexels_user_upwork_profile')); ?>" target="_blank" class="btn btn-small contact-btn">Contact me</a>
-                </header>
-            </div>
-            <div class="col-md-12">
                 <?php
                 $pexels_before_image = get_post_meta(get_the_ID(), '_pexels_before_image', true);
                 $pexels_after_image = get_post_meta(get_the_ID(), '_pexels_after_image', true);

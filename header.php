@@ -26,7 +26,7 @@
                     ?>
                     <?php echo get_search_form(); ?>
                     <div id="navlink">
-                        <a href="home" target="_self" class="btn btn-small contact-btn ms-2">Home</a>
+                        <a href="<?php echo home_url(); ?>" target="_self" class="btn btn-small contact-btn ms-2">Home</a>
                         <a href="about" target="_self" class="btn btn-small contact-btn">About me</a>
                     <a href="<?php echo esc_url(get_theme_mod('pexels_user_upwork_profile')); ?>" target="_blank" class="btn btn-small contact-btn">Contact me
                     </a>
